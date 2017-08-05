@@ -74,7 +74,20 @@ def RNN(X, weights, biases):
 
 
 y_ = RNN(x, weights, biases)
+"""
+logits_=
+[[ 1.13117659  0.        ]
+ [ 0.71915132  0.11906944]
+ [ 0.37535462  0.07764968]
+ [ 0.71174532  0.00879892]
+ [ 0.71073204  0.0098007 ]
+ [ 0.72080445  0.        ]
+ [ 0.64119291  0.24422166]
+ [ 1.11006296  0.42439148]]
+"""
 logits = tf.reshape(tf.concat(y_, 1), [-1, class_size], name="logits")
+
+# targets = [[0 0 1 0 0 0 0 1]]
 targets = tf.reshape(y, [1, -1], name="targets")
 
 seq_weights = tf.ones([batch_size * sequence_size])
@@ -94,6 +107,12 @@ step = 0
 while step < training_iters :
     feed={x: batch_x, y: batch_y}
     sess.run(optimizer, feed_dict=feed)
+    logits_, targets_ = sess.run([logits,targets], feed_dict=feed)
+    print("targets_")
+    print(targets_)
+    print("logits_")
+    print(logits_)
+    break
 
     if step % display_step == 0 :
         p_x, p_y, p_y_, p_logits, p_cost = sess.run([x, y, y_, logits, cost], feed_dict=feed)
