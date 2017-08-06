@@ -1,10 +1,12 @@
 from random import sample
 import numpy as np
+import gensim
 
 import configparser
 import os
 
 class FileUtils(object):
+
     def rand_batch_gen(x, y, batch_size):
         while True:
             sample_idx = sample(list(np.arange(len(x))), batch_size)
@@ -29,3 +31,4 @@ class FileUtils(object):
 
     def isEmpty(folder):
         return not (len(os.listdir(folder)) > 0)
+

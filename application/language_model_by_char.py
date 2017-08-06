@@ -4,6 +4,7 @@ import numpy as np
 from random import sample
 import math
 
+# char의 id 사용
 
 def rand_batch_gen(x, y, batchSize=1):
     while True:
@@ -187,12 +188,12 @@ epochs = 100000000
 learning_rate = 0.01
 
 
-char = ['!','#','$','@','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-#idx2ch = list(sorted(set('\n'.join(char))))
-idx2ch = list(sorted(set(char)))
+chars = ['!','#','$','@','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+#idx2ch = list(sorted(set('\n'.join(chars))))
+idx2ch = list(sorted(set(chars)))
 ch2idx = {k: v for v, k in enumerate(idx2ch)}
 
-X, Y = to_array(char, ch2idx, seqLen=10)
+X, Y = to_array(chars, ch2idx, seqLen=10)
 trainset = rand_batch_gen(X, Y, batchSize=3)
 
 # build the model

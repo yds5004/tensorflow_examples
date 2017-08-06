@@ -42,7 +42,6 @@ drop_out_rate = 0.7
 # tf Graph input
 x = tf.placeholder("float", [None, sequence_size, vector_size])
 y = tf.placeholder("int32", [None, sequence_size])
-XLength = tf.placeholder("int32", [None])
 
 weights = {
     'out1': tf.get_variable("out1", shape=[hidden_size1, hidden_size2], initializer=tf.contrib.layers.xavier_initializer()),
