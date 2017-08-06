@@ -179,7 +179,6 @@ def predict(initChar, numChars, batchSize, seqLen, numClasses, stateSize):
 
 
 ckpt_path = '../resources/model/'
-data_path = '../resources/data/'
 model_name = 'tf_lm'
 
 num_layers = 2

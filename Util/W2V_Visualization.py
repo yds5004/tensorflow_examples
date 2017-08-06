@@ -15,7 +15,7 @@ def clean(text):
 
 sentences = [line for text in train.data for line in clean(text)]
 
-model = Word2Vec(sentences, workers=4, size=100, min_count=50, window=10, sample=1e-3)
+model = Word2Vec(sentences, workers=4, size=100, min_count=50, window=10, sample=1e-3, sg=1)
 
 print (model.most_similar('memory'))
 
