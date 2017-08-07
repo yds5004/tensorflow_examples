@@ -28,6 +28,6 @@
     * translation 
 
 #### 참고
-    * <https://github.com/tensorflow/models>
-    * <https://github.com/golbin>
-    * <https://github.com/aymericdamien/TensorFlow-Examples/tree/master/examples>
+* <https://github.com/tensorflow/models>
+* <https://github.com/golbin>
+* <https://github.com/aymericdamien/TensorFlow-Examples/tree/master/examples>
