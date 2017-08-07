@@ -9,23 +9,23 @@
 #### 간략 설명
 
 > 01. BasicModels (deep learning 간단 사용 방법)
-> * autoencoder
-> * bidirectional rnn
-> * classification
-> * convolutional network
-> * GAN
-> * linear regression
-> * logistic regression
-> * multilayer perceptron
-> * nearest neighbor
-> * rnn
-> * word2vec
+>    * autoencoder
+>    * bidirectional rnn
+>    * classification
+>    * convolutional network
+>    * GAN
+>    * linear regression
+>    * logistic regression
+>    * multilayer perceptron
+>    * nearest neighbor
+>    * rnn
+>    * word2vec
 
-> application (deep learning을 이용한 응용 프르그램)
-> * chatbot
-> * autocomplete
-> * language model
-> * translation 
+> 02. application (deep learning을 이용한 응용 프르그램)
+>    * chatbot
+>    * autocomplete
+>    * language model
+>    * translation 
 
 #### 참고
 * <https://github.com/tensorflow/models>
