@@ -8,7 +8,7 @@
 
 #### 간략 설명
 
-01. BasicModels (deep learning 간단 사용 방법)
+a. BasicModels (deep learning 간단 사용 방법)
     * autoencoder
     * bidirectional rnn
     * classification
@@ -21,7 +21,7 @@
     * rnn
     * word2vec
 
-02. application (deep learning을 이용한 응용 프르그램)
+b. application (deep learning을 이용한 응용 프르그램)
     * chatbot
     * autocomplete
     * language model
