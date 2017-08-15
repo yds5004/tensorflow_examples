@@ -5,7 +5,7 @@ tf.app.flags.DEFINE_string("train_dir", "./brain", "학습한 신경망을 저�
 tf.app.flags.DEFINE_string("log_dir", "./logs", "로그를 저장할 폴더")
 tf.app.flags.DEFINE_string("ckpt_name", "conversation.ckpt", "체크포인트 파일명")
 
-tf.app.flags.DEFINE_boolean("train", False, "학습을 진행합니다.")
+tf.app.flags.DEFINE_boolean("train", True, "학습을 진행합니다.")
 tf.app.flags.DEFINE_boolean("test", True, "테스트를 합니다.")
 tf.app.flags.DEFINE_boolean("data_loop", True, "작은 데이터셋을 실험해보기 위해 사용합니다.")
 tf.app.flags.DEFINE_integer("batch_size", 100, "미니 배치 크기")

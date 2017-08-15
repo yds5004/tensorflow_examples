@@ -42,7 +42,7 @@ def train(dialog, batch_size=100, epoch=100):
     print('최적화 완료!')
 
 
-def test(dialog, batch_size=100):
+def predict(dialog, batch_size=100):
     print("\n=== 예측 테스트 ===")
 
     model = Seq2Seq(dialog.vocab_size)
@@ -80,7 +80,7 @@ def main(_):
     if FLAGS.train:
         train(dialog, batch_size=FLAGS.batch_size, epoch=FLAGS.epoch)
     elif FLAGS.test:
-        test(dialog, batch_size=FLAGS.batch_size)
+        predict(dialog, batch_size=FLAGS.batch_size)
 
 if __name__ == "__main__":
     tf.app.run()
