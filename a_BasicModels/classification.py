@@ -13,6 +13,8 @@ HIDDEN1_SIZE = 256
 HIDDEN2_SIZE = 128
 
 
+
+
 x = tf.placeholder( tf.float32, shape=[None, INPUT_SIZE], name='x')
 y_ = tf.placeholder( tf.float32, shape=[None, CLASS_SIZE], name='y')
 
@@ -41,6 +43,10 @@ train = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cost3)
 compare_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(compare_prediction, tf.float32))
 
+
+
+
+
 session = tf.Session()
 init = tf.global_variables_initializer()
 session.run(init)
@@ -51,6 +57,10 @@ for i in range (training_iters):
     if i % display_iters == 0:
         print ('step: ', i, ' / loss: ', cost, ' / acc: ', acc)
 
+
+
+
+feed = { x:[ [ 2, 4, 6, 5, 2, 10, 12 ]] }
 result1, result2 = session.run ( [y, tf.arg_max(y, 1)], feed_dict=feed )
 print (result1)
 print (result2)

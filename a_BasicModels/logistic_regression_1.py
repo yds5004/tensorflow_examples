@@ -7,6 +7,7 @@ training_epochs = 100
 batch_size = 100
 display_step = 10
 
+
 # Training Data
 batch_xs = np.asarray([
                             [3.3,4.4,5.5,6.71,6.93,5.4],
